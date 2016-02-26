@@ -8,4 +8,4 @@ RUN apt-get update ; apt-get install -y moosefs-client moosefs-cli nano ; rm -rf
 EXPOSE 9420
 EXPOSE 9422
 
-CMD ["/usr/bin/mfsmount /mnt/MFS -H 10.2.0.91 -o allow_other"]
+CMD ["/usr/bin/mfsmount /mnt/MFS -H 10.2.0.91 -o allow_other; ln -s /mnt/MFS/Services/Munki/htdocs/munki /var/www/; "]
